@@ -1,0 +1,569 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+
+h2 {
+  text-align:center;
+  font-size: 1.565rem;
+  margin-top:1%;
+}
+
+/* //HEADER SECTION// */
+header {
+  background: #2D0A10;
+  /* opacity:0.3; */
+  z-index: 1;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+}
+nav {
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem;
+}
+
+.header-logo h3 {
+  color:white;
+  font-size: 1.765rem;
+}
+.header-logo h3 {
+  margin-left: 1rem;
+}
+
+.nav-toggle {
+  display: none;
+}
+.nav-checkbox {
+  display: none;
+}
+.nav-menu {
+  display: flex;
+  list-style: none;
+}
+.nav-menu li:not(:last-child) {
+  margin-right: 1.5rem;
+}
+.nav-menu li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.365rem;
+}
+/* hover styles for the nav-link */
+
+.nav-link:hover {
+  opacity: 0.85;
+}
+
+
+
+
+/* //RESPONSIVE DESIGN// */
+@media (max-width: 750px) {
+  header {
+    z-index: 1;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+  }
+  .header-logo {
+    margin-left: -1.5rem;
+  }
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    margin-top: 0.4rem;
+    margin-right: 1rem;
+    right: 0;
+  }
+  nav svg {
+    width: 1.3rem;
+    fill: white;
+  }
+  .close,
+  .nav-checkbox {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin: 0.1rem 0;
+  }
+  .nav-links {
+    position: absolute;
+    margin-top: 2.76rem;
+    top: 20px;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+  }
+
+  li {
+    display: none;
+    padding: 0.2rem 1rem 0.2rem;
+    font-size: 2rem;
+  }
+  .nav-checkbox:checked ~ .nav-links .nav-menu li {
+    display: block;
+  }
+  .nav-checkbox:checked ~ label.nav-toggle .close {
+    display: block;
+  }
+  .nav-checkbox:checked ~ label.nav-toggle .menu {
+    display: none;
+  }
+  .nav-checkbox:checked ~ .nav-links .nav-menu {
+    background: linear-gradient(to right, hsl(350, 64%, 31%), #2D0A10);
+    opacity: 1.5;
+    height: 95vh;
+    padding-top: 2rem;
+    border-radius: 3px;
+  }
+}
+
+.section-four {
+  min-height: calc(100vh - 85px);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  gap:10%;
+  padding:16px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+.col {
+  width: 50%;
+}
+
+.section-title{
+  font-size:2rem;
+  text-align:center;
+  padding:16px;
+}
+
+.col p {
+  font-size:1.5rem;
+}
+
+fieldset {
+  width:90%;
+  text-align: center;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  position: relative;
+  margin-top:16px;
+  border-top:2px solid #2D0A10;
+}
+
+fieldset legend svg{
+  width:32px;
+  height:32px;
+  fill:#2D0A10;
+  margin-left:16px;
+}
+
+fieldset legend svg:last-child{
+  margin-right:16px;
+}
+
+img {
+  max-width:100%;
+  margin: 1rem auto;
+}
+
+@media (max-width: 720px) {
+  .row {
+    flex-direction: column;
+    text-align: center;
+  }
+  .col {
+    width: 100%;
+  }
+}
+
+
+
+/*PROJECT CARDS STYLING*/
+
+
+.project-card-wrapper{
+  display:flex;
+  justify-content:space-evenly;
+  align-items: center;
+  margin-top: 1%;
+  flex-wrap:wrap;
+  width:100%;
+  padding:8px;
+  max-height:fit-content;
+  gap:2%;
+}
+
+.project-card{
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  transition:0.3s;
+  border-radius:5px;
+}
+
+.project-card:hover {
+  box-shadow: 0 2px 0 4px rgba(19, 18, 18, 0.5);
+  background-color: #ffffff;
+}
+
+.project-card img {
+  width:100%;
+  height:200px;
+}
+
+.card-content{
+  width:250px;
+  padding:2px 16px;
+}
+
+.card-content p{
+  font-size:1.165rem;
+}
+
+.card-content h3{
+  font-size:1.3rem;
+}
+
+.project-title{
+  color:#2D0A10;
+  margin-bottom: 10px;
+  font-size:18px;
+}
+
+.project-brief{
+  font-size:15px;
+}
+
+.project-links {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  gap:10px;
+}
+
+.project-links svg{
+  width:20px;
+  height:30px;
+  fill:#2D0A10;
+}
+
+@media (max-width:750px) {
+  .project-card, .card-content, .project-links {
+    width:100%;
+  }
+}
+
+/* SKILLS STYLING SECTION */
+
+ /*you can also seperate the stack-group into four items per section and reduce the gap to 10px to get the same double row wrap effect*/
+ .stack-group{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  gap:30px;
+  flex-wrap: wrap;
+}
+
+/*STACK SECTION STYLING - FOR CHROME*/
+.stack-progress::-webkit-progress-bar {
+  background-color:  rgb(167, 145, 145);
+  border-radius: 100px;
+}
+
+.stack-progress::-webkit-progress-value {
+  background-color: rgba(223, 70, 14, 0.979);
+  border-radius: 100px;
+}
+
+/*STACK SECTION STYLING - FOR FIREFOX BROWSER*/
+
+.stack-progress::-moz-progress-bar {
+  background-color: rgb(167, 145, 145);
+  border-radius: 100px;
+}
+
+/*STACK SECTION STYLING - FOR IE10 BROWSER*/
+
+.stack-progress {
+  color: rgb(223, 70, 14);
+  border-radius: 100px;
+}
+
+.stack-progress-wrapper label {
+  display:block;
+}
+
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media (max-width: 700px) {
+  .stack-group {   
+    flex-direction: column;
+  }
+}
+
+
+
+/* SUBSCRIPTION SECTION */
+
+.section-three {
+  background: linear-gradient(to right, hsl(350, 64%, 31%), hsl(350, 64%, 11%));
+  color: white;
+  min-height:calc(100vh - 70px);
+}
+
+.section-three .section-title--dark {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.w_container {
+  width: 100%;
+  /* max-width: 1100px; */
+  /* margin: 0 auto; */
+  /* border:3px solid black; */
+
+}
+.section-three .w_container {
+  padding: 2%;
+  gap:2%;
+}
+
+/* .subscription-details-container {
+  border:3px solid pink;
+} */
+
+.subscription-details {
+  display: flex;
+  gap: 5%;
+}
+
+.subscription-details .subscription-text {
+  text-align: right;
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  flex-direction: column;
+  margin-bottom: 7.5%;
+}
+
+.subscription-details svg {
+  width: 40px;
+  height: 40px;
+}
+
+.subscription-details .subscription-text h5 {
+  font-size: 1.2em;
+}
+
+.section-three .col p {
+  font-size: 0.765em;
+}
+
+.section-three .subscription-image-card {
+  padding: 10px;
+  flex-basis: 10%;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+
+.subscription-image-card legend svg{
+ fill:white;
+}
+
+/*WORK WITH ME FORM SECTION*/
+
+.form-section{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-section form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width:100%;
+  /* margin-top: 40px; */
+}
+
+.form-group label{
+  display:block;
+  margin-bottom: 10px;
+}
+
+.form-group input{
+  border: 1px solid #2D0A10;
+  border-radius:5px;
+  padding:10px;
+  width:400px;
+  margin-bottom: 10px;
+  font-size:14px;
+}
+
+.form-group textarea{
+  border: 1px solid #2D0A10;
+  border-radius:5px;
+  padding:10px;
+  width:400px;
+  height:150px;
+  resize:none;
+  margin-bottom:10px;
+}
+
+@media (max-width:750px) {
+
+  .subscription-image-card {
+    padding: 0px;
+  }
+
+  .form-section .form {
+    width:100%;
+  }
+  .form-section{
+    width:100%;
+  }
+
+  .form-group input, .form-group textarea {
+    max-width:70%;
+  }
+}
+
+
+
+.section-four {
+  background-color: none;
+}
+
+.SMSS-section {
+  margin: 5% 0;
+  min-height: 300px;
+  width: 95%;
+  align-items: center;
+}
+
+.SMSS-section .SMSS-card p {
+  color:white;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 1.265rem;
+}
+
+.SMSS-section h3 {
+  color: white;
+  margin-bottom: 1.5%;
+  text-align: center;
+  font-size:1.565rem;
+}
+
+.SMSS-card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  flex-wrap: wrap;
+}
+
+.SMSS-card {
+  background-color:none;
+  /* box-shadow: 0 0.5px 0 0.5px  rgb(3, 36, 3); */
+  transition: 0.2s;
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 5%;
+}
+
+/*
+.SMSS-card:hover {
+    box-shadow: 0 1px 0 2px  rgb(3, 36, 3);
+    background-color: #ffffff;
+} */
+
+.SMSS-card .SMSS-svg-card svg {
+  width: 40px;
+  height: 40px;
+  fill:white;
+  margin-bottom: 0px;
+}
+
+.SMSS-svg-holder {
+  border: 2px solid black;
+}
+
+.SMSS-card-content {
+  text-align: center;
+  padding: 0;
+  max-width: 300px;
+}
+
+.SMSS-title {
+  color: rgb(2, 2, 46);
+  margin-bottom: 5px;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.SMSS-brief {
+  color: rgb(2, 2, 46);
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.SMSS-svg-card {
+  background: linear-gradient(to right, hsl(350, 64%, 31%), hsl(350, 64%, 11%));
+  box-shadow: 0px 2px 1px 2px rgba(3, 36, 3, 0.9);
+  transition: 0.3s;
+  border-radius: 50%;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10.2%;
+}
+.SMSS-svg-card:hover {
+  background: white;
+  box-shadow: 1px 4px 6px 6px rgba(3, 36, 3, 0.9);
+  margin-bottom: 10.2%;
+  padding: 50px;
+  transition: 0.3s;
+}
+
+.SMSS-svg-card:hover svg {
+  width: 40px;
+  height: 40px;
+  fill: #2D0A10;
+  margin-bottom: 0px;
+}
+
+/*this is the end of the social media success section*/
