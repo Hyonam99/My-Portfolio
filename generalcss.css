@@ -11,6 +11,10 @@ h2 {
   margin-top:1%;
 }
 
+a{
+  text-decoration: none;
+}
+
 /* //HEADER SECTION// */
 header {
   background: #2D0A10;
@@ -46,7 +50,7 @@ nav {
   display: flex;
   list-style: none;
 }
-.nav-menu li:not(:last-child) {
+.nav-menu li {
   margin-right: 1.5rem;
 }
 .nav-menu li a {
@@ -95,13 +99,14 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    /* justify-content: center; */
     align-items: center;
     margin: 0.1rem 0;
   }
   .nav-links {
     position: absolute;
     margin-top: 2.76rem;
-    top: 20px;
+    top: 10px;
     right: 0;
     width: 100%;
     z-index: 100;
@@ -109,7 +114,8 @@ nav {
 
   li {
     display: none;
-    padding: 0.2rem 1rem 0.2rem;
+    padding: 0.2rem 1rem;
+    text-align: center;
     font-size: 2rem;
   }
   .nav-checkbox:checked ~ .nav-links .nav-menu li {
